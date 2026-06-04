@@ -2,7 +2,14 @@ name: Update README cards
 
 on:
   schedule:
-    - cron: "* * * * *" # minute hour day-of-month month day-of-week -> every minute of every hour/day/month/week
+    # ┌───────────── minute (0 - 59)
+    # │ ┌───────────── hour (0 - 23)
+    # │ │ ┌───────────── day of the month (1 - 31)
+    # │ │ │ ┌───────────── month (1 - 12)
+    # │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday; 7 is also Sunday on some systems)
+    # │ │ │ │ │
+    # * * * * *
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
