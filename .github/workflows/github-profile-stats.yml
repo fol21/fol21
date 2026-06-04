@@ -9,7 +9,7 @@ on:
     # │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday; 7 is also Sunday on some systems)
     # │ │ │ │ │
     # * * * * *
-    - cron: "*/5 * * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
